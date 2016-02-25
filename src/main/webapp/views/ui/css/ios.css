@@ -1,0 +1,25 @@
+/*--号码估值--*/
+.ibody{
+	zoom: 0.7;
+}
+.king {
+    height: 770px;
+}
+.king .nubs .style-1 {
+    margin: 20% 0 0 17%;
+}
+.king .nubs .style-1 ul {
+    margin: -178% 0 0px 73%;
+}
+.king .nubs .style-2 {
+    margin: 80% 0 0 14%;
+}
+.king .nubs .style-2 ul {
+    margin: 35% 0 0px -95%;
+}
+.king .nubs .style-3 {
+    margin: 90% 0 0px 69%;
+}
+.king .nubs .style-3 ul {
+    margin: 60% 0 0px 80%;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="info.puton.product.diviner.dao.DivinerMapper" >
+  <resultMap id="BaseResultMap" type="info.puton.product.diviner.model.Diviner" >
+    <constructor >
+      <idArg column="BILL_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="TOTAL_VALUE" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="OVER_RATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="BLACK_VALUE" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="BLACK_CONTENT_1" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="BLACK_CONTENT_2" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PERSONAL_VALUE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="PERSONAL_CONTENT_1" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PERSONAL_CONTENT_2" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="PERSONAL_CONTENT_3" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ADDITION_VALUE" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="ADDITION_CONTENT_1" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ADDITION_CONTENT_2" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ADDITION_CONTENT_3" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    BILL_ID, TOTAL_VALUE, OVER_RATE, BLACK_VALUE, BLACK_CONTENT_1, BLACK_CONTENT_2, PERSONAL_VALUE, 
+    PERSONAL_CONTENT_1, PERSONAL_CONTENT_2, PERSONAL_CONTENT_3, ADDITION_VALUE, ADDITION_CONTENT_1, 
+    ADDITION_CONTENT_2, ADDITION_CONTENT_3
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from diviner
+    where BILL_ID = #{billId,jdbcType=VARCHAR}
+  </select>
+</mapper>
